@@ -7,7 +7,6 @@
   <meta name="description" content="Research Engineer specializing in Optical Metrology, Experimental Mechanics, Materials Characterization, Polymer Packaging & AI-Driven Analytics." />
   <meta name="author" content="Rajaguruprasath Raveendran (R. G. R. Prasath)" />
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -29,16 +28,12 @@
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-          letterSpacing: {
-            tighter: '-0.03em',
           }
         }
       }
     }
   </script>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -46,23 +41,34 @@
   <style>
     body { 
       font-family: 'Inter', system-ui, sans-serif; 
-      line-height: 1.7;
+      line-height: 1.75;
+    }
+    /* Critical: breathing room when jumping via nav links */
+    section[id] {
+      scroll-margin-top: 5.5rem;
     }
     .section-label {
-      @apply text-xs font-semibold tracking-widest uppercase text-primary-600 mb-3;
+      letter-spacing: 0.12em;
+    }
+    /* Subtle technical grid */
+    .tech-grid {
+      background-image: 
+        linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+      background-size: 44px 44px;
     }
   </style>
 </head>
 <body class="bg-white text-slate-700 antialiased">
 
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-100">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200/70">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="#home" class="font-semibold text-slate-800 text-base tracking-tight hover:text-primary-600 transition">
+        <a href="#home" class="font-semibold text-slate-800 text-[15px] tracking-tight hover:text-primary-600 transition">
           R. G. R. Prasath
         </a>
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
+        <div class="hidden md:flex items-center gap-9 text-[13px] font-medium text-slate-500">
           <a href="#about" class="hover:text-primary-600 transition">About</a>
           <a href="#experience" class="hover:text-primary-600 transition">Experience</a>
           <a href="#skills" class="hover:text-primary-600 transition">Skills</a>
@@ -77,46 +83,64 @@
       </div>
     </div>
     <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
-      <div class="px-6 py-4 space-y-3 text-sm font-medium text-slate-600">
-        <a href="#about" class="block py-1.5">About</a>
-        <a href="#experience" class="block py-1.5">Experience</a>
-        <a href="#skills" class="block py-1.5">Skills</a>
-        <a href="#publications" class="block py-1.5">Publications</a>
-        <a href="#contact" class="block py-1.5">Contact</a>
+      <div class="px-6 py-5 space-y-3 text-sm font-medium text-slate-600">
+        <a href="#about" class="block py-1">About</a>
+        <a href="#experience" class="block py-1">Experience</a>
+        <a href="#skills" class="block py-1">Skills</a>
+        <a href="#publications" class="block py-1">Publications</a>
+        <a href="#contact" class="block py-1">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section id="home" class="pt-32 pb-24 md:pt-44 md:pb-32">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-      <p class="section-label mb-5">Research Engineer</p>
-      <h1 class="text-4xl sm:text-5xl md:text-[3.4rem] font-bold text-slate-900 tracking-tighter leading-tight mb-5">
+  <!-- ==================== HERO with Technical Background ==================== -->
+  <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <!-- Technical / scientific background image -->
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80" 
+        alt="Abstract scientific optical background"
+        class="w-full h-full object-cover"
+      />
+      <!-- Dark overlay for text readability -->
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-900/88 via-slate-900/82 to-slate-900/90"></div>
+      <!-- Subtle accent glow -->
+      <div class="absolute inset-0 bg-gradient-to-tr from-primary-900/25 via-transparent to-cyan-900/15"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center py-28 md:py-36">
+      <p class="section-label text-primary-300 text-xs font-semibold uppercase mb-6">
+        Research Engineer
+      </p>
+      
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-[1.15] mb-5">
         Rajaguruprasath<br class="sm:hidden"> Raveendran
       </h1>
-      <p class="text-lg md:text-xl text-slate-500 font-medium mb-6 tracking-wide">
+      
+      <p class="text-lg md:text-xl text-slate-300 font-medium mb-8 tracking-wide">
         R. G. R. Prasath
       </p>
-      <p class="text-base md:text-lg text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed">
+      
+      <p class="text-base md:text-[17px] text-slate-300/90 max-w-2xl mx-auto mb-12 leading-relaxed">
         Optical Metrology &nbsp;·&nbsp; Experimental Mechanics &nbsp;·&nbsp; Materials Characterization<br class="hidden sm:block">
         Polymer Packaging &nbsp;·&nbsp; AI-Driven Analytics
       </p>
       
-      <div class="flex flex-wrap justify-center gap-3 mb-12">
+      <div class="flex flex-wrap justify-center gap-3.5 mb-14">
         <a href="mailto:raja.guruprasath@gmail.com" 
-           class="inline-flex items-center px-6 py-3 bg-primary-600 text-white text-sm font-medium rounded-full hover:bg-primary-700 transition shadow-sm shadow-primary-200">
+           class="inline-flex items-center px-7 py-3.5 bg-primary-500 text-white text-sm font-semibold rounded-full hover:bg-primary-400 transition shadow-lg shadow-primary-500/25">
           Email Me
         </a>
         <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener"
-           class="inline-flex items-center px-6 py-3 bg-white text-slate-700 text-sm font-medium rounded-full border border-slate-200 hover:border-primary-300 hover:text-primary-700 transition">
+           class="inline-flex items-center px-7 py-3.5 bg-white/10 text-white text-sm font-medium rounded-full border border-white/25 hover:bg-white/20 transition backdrop-blur-sm">
           Google Scholar
         </a>
         <a href="https://orcid.org/0000-0003-4251-0511" target="_blank" rel="noopener"
-           class="inline-flex items-center px-6 py-3 bg-white text-slate-700 text-sm font-medium rounded-full border border-slate-200 hover:border-primary-300 hover:text-primary-700 transition">
+           class="inline-flex items-center px-7 py-3.5 bg-white/10 text-white text-sm font-medium rounded-full border border-white/25 hover:bg-white/20 transition backdrop-blur-sm">
           ORCID
         </a>
         <a href="https://www.linkedin.com/in/rajaguruprasath-raveendran-228135a/" target="_blank" rel="noopener"
-           class="inline-flex items-center px-6 py-3 bg-white text-slate-700 text-sm font-medium rounded-full border border-slate-200 hover:border-primary-300 hover:text-primary-700 transition">
+           class="inline-flex items-center px-7 py-3.5 bg-white/10 text-white text-sm font-medium rounded-full border border-white/25 hover:bg-white/20 transition backdrop-blur-sm">
           LinkedIn
         </a>
       </div>
@@ -125,69 +149,69 @@
         +1 404-789-6612 &nbsp;·&nbsp; +91 96326-91801 &nbsp;·&nbsp; raja.guruprasath@gmail.com
       </p>
     </div>
+
+    <!-- Soft fade into white content -->
+    <div class="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-white to-transparent"></div>
   </section>
 
-  <!-- Subtle divider -->
-  <div class="max-w-xs mx-auto border-t border-slate-100"></div>
-
-  <!-- About -->
-  <section id="about" class="py-24 md:py-32">
+  <!-- ==================== ABOUT ==================== -->
+  <section id="about" class="py-28 md:py-36 bg-white">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <p class="section-label">About</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-10">
+      <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-4">About</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-12">
         Professional Summary
       </h2>
       
-      <div class="space-y-6 text-base md:text-lg text-slate-600 leading-relaxed">
+      <div class="space-y-8 text-[17px] text-slate-600 leading-relaxed">
         <p>
-          Research Engineer with <span class="text-slate-900 font-medium">18+ years</span> of academic and industrial experience developing optical metrology, materials-characterization, and AI-driven analytical methods across packaging, semiconductor, photovoltaic, aerospace, and flexible-electronics applications.
+          Research Engineer with <span class="text-slate-900 font-semibold">18+ years</span> of academic and industrial experience developing optical metrology, materials-characterization, and AI-driven analytical methods across packaging, semiconductor, photovoltaic, aerospace, and flexible-electronics applications.
         </p>
         <p>
-          Deep specialization in experimental, non-destructive optical stress and deformation measurement — <span class="text-slate-900 font-medium">digital photoelasticity</span>, <span class="text-slate-900 font-medium">digital image correlation (DIC)</span>, <span class="text-slate-900 font-medium">NIR polariscopy</span>, and <span class="text-slate-900 font-medium">phase-shifting interferometry</span> — applied to PET/rPET/PEF packaging, semiconductor-grade silicon wafers, solar cells, carbon-fiber composites, and flexible electronics.
+          Deep specialization in experimental, non-destructive optical stress and deformation measurement — <span class="text-slate-900 font-semibold">digital photoelasticity</span>, <span class="text-slate-900 font-semibold">digital image correlation (DIC)</span>, <span class="text-slate-900 font-semibold">NIR polariscopy</span>, and <span class="text-slate-900 font-semibold">phase-shifting interferometry</span> — applied to PET/rPET/PEF packaging, semiconductor-grade silicon wafers, solar cells, carbon-fiber composites, and flexible electronics.
         </p>
         <p>
-          Technical-lead track record on industry-sponsored programs with <span class="text-slate-900 font-medium">Coca-Cola, Sidel, ALPLA, Plastic Technologies Inc., Boeing, NextFlex, SunPower</span>, and the Photovoltaic Manufacturing Consortium. Currently building AI/computer-vision frameworks to automate interpretation of optical fringe and deformation data.
+          Technical-lead track record on industry-sponsored programs with <span class="text-slate-900 font-semibold">Coca-Cola, Sidel, ALPLA, Plastic Technologies Inc., Boeing, NextFlex, SunPower</span>, and the Photovoltaic Manufacturing Consortium. Currently building AI/computer-vision frameworks to automate interpretation of optical fringe and deformation data.
         </p>
         <p>
-          Author of <span class="text-slate-900 font-medium">20+ peer-reviewed publications</span> and conference papers; certified peer reviewer for Elsevier and IOP journals.
+          Author of <span class="text-slate-900 font-semibold">20+ peer-reviewed publications</span> and conference papers; certified peer reviewer for Elsevier and IOP journals.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="py-24 md:py-32 bg-slate-50">
+  <!-- ==================== EXPERIENCE ==================== -->
+  <section id="experience" class="py-28 md:py-36 bg-slate-50 tech-grid">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <p class="section-label">Career</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-14">
+      <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-4">Career</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-16">
         Professional Experience
       </h2>
       
-      <div class="space-y-16">
+      <div class="space-y-20">
         <!-- Independent -->
         <article>
-          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-5">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-6">
             <div>
               <h3 class="text-xl font-semibold text-slate-900">Independent Researcher / Consultant</h3>
-              <p class="text-primary-600 font-medium mt-1">India</p>
+              <p class="text-primary-600 font-medium mt-1.5">India</p>
             </div>
             <span class="text-sm text-slate-400 font-medium whitespace-nowrap">2022 – Present</span>
           </div>
-          <ul class="space-y-3 text-slate-600 leading-relaxed">
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+          <ul class="space-y-4 text-slate-600 leading-relaxed">
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Developing an AI-assisted analytical framework that extracts morphology-related insights from polariscope-measured birefringence data for non-destructive evaluation of PET/rPET processing and manufacturing quality.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Correlating spatial stretching distribution with residual stress, dimensional stability, and stress-crack resistance in stretch-blow-molded PET containers.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Developing non-contact optical methods to map molecular orientation and thermal gradients in translucent polymers, extending toward PEF and emerging packaging resins.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Consulting support in experimental stress analysis, defect detection, and non-contact mechanical integrity evaluation.</span>
             </li>
           </ul>
@@ -195,20 +219,20 @@
 
         <!-- Polaritek -->
         <article>
-          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-5">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-6">
             <div>
               <h3 class="text-xl font-semibold text-slate-900">Technical Consultant</h3>
-              <p class="text-primary-600 font-medium mt-1">Polaritek Systems Inc., Atlanta, USA</p>
+              <p class="text-primary-600 font-medium mt-1.5">Polaritek Systems Inc., Atlanta, USA</p>
             </div>
             <span class="text-sm text-slate-400 font-medium whitespace-nowrap">Jan 2015 – Jan 2020</span>
           </div>
-          <ul class="space-y-3 text-slate-600 leading-relaxed">
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+          <ul class="space-y-4 text-slate-600 leading-relaxed">
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Provided technical and product-development expertise for optical stress-measurement and polariscope-based inspection instrumentation, supporting design, calibration, and performance validation of the commercial product line.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Contributed to best-practice methodologies for instrument setup and measurement stability used by manufacturing customers.</span>
             </li>
           </ul>
@@ -216,24 +240,24 @@
 
         <!-- Georgia Tech -->
         <article>
-          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-5">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-6">
             <div>
               <h3 class="text-xl font-semibold text-slate-900">Research Engineer I</h3>
-              <p class="text-primary-600 font-medium mt-1">Georgia Institute of Technology, Atlanta, USA</p>
+              <p class="text-primary-600 font-medium mt-1.5">Georgia Institute of Technology, Atlanta, USA</p>
             </div>
             <span class="text-sm text-slate-400 font-medium whitespace-nowrap">May 2012 – Oct 2018</span>
           </div>
-          <ul class="space-y-3 text-slate-600 leading-relaxed">
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+          <ul class="space-y-4 text-slate-600 leading-relaxed">
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Technical Lead on multidisciplinary industry-sponsored programs with Coca-Cola, ALPLA, Sidel, Plastic Technologies Inc., Boeing, and NextFlex — developing non-destructive optical systems for stress measurement, defect detection, and process optimization.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Led wafer-level residual-stress characterization of semiconductor-grade silicon using phase-shifting interferometry and NIR polariscopy; methods adopted by SunPower and the Photovoltaic Manufacturing Consortium.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Collaborated under Prof. Steven Danyluk, Prof. Suresh Sitaraman, and Prof. Shreyes Melkote; authored technical procedures and research proposals.</span>
             </li>
           </ul>
@@ -241,20 +265,20 @@
 
         <!-- IIT Hyderabad -->
         <article>
-          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-5">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-6">
             <div>
               <h3 class="text-xl font-semibold text-slate-900">Senior Research Associate</h3>
-              <p class="text-primary-600 font-medium mt-1">Indian Institute of Technology Hyderabad</p>
+              <p class="text-primary-600 font-medium mt-1.5">Indian Institute of Technology Hyderabad</p>
             </div>
             <span class="text-sm text-slate-400 font-medium whitespace-nowrap">2011 – 2012</span>
           </div>
-          <ul class="space-y-3 text-slate-600 leading-relaxed">
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+          <ul class="space-y-4 text-slate-600 leading-relaxed">
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Established the Engineering Optics Lab and managed the Experimental Stress Analysis Laboratory.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Performed experimental mechanics research on CFRP panels using digital image correlation (DIC), including high-temperature DIC.</span>
             </li>
           </ul>
@@ -262,20 +286,20 @@
 
         <!-- IIT Madras -->
         <article>
-          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-5">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-6">
             <div>
               <h3 class="text-xl font-semibold text-slate-900">Project Officer</h3>
-              <p class="text-primary-600 font-medium mt-1">Indian Institute of Technology Madras</p>
+              <p class="text-primary-600 font-medium mt-1.5">Indian Institute of Technology Madras</p>
             </div>
             <span class="text-sm text-slate-400 font-medium whitespace-nowrap">2004 – 2009</span>
           </div>
-          <ul class="space-y-3 text-slate-600 leading-relaxed">
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+          <ul class="space-y-4 text-slate-600 leading-relaxed">
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Led experimental stress analysis on ISRO- and GTRE-sponsored projects focusing on stress concentration, crack behavior, and interface effects in dissimilar-material systems.</span>
             </li>
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1.5 flex-shrink-0">•</span>
+            <li class="flex gap-3.5">
+              <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
               <span>Developed in-house data-acquisition and analysis software for optical experimental mechanics.</span>
             </li>
           </ul>
@@ -284,17 +308,17 @@
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-24 md:py-32">
+  <!-- ==================== SKILLS ==================== -->
+  <section id="skills" class="py-28 md:py-36 bg-white">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <p class="section-label">Expertise</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-14">
+      <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-4">Expertise</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-16">
         Core Competencies
       </h2>
       
-      <div class="grid sm:grid-cols-2 gap-8">
-        <div class="group">
-          <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-4">
+      <div class="grid sm:grid-cols-2 gap-x-12 gap-y-14">
+        <div>
+          <div class="w-11 h-11 rounded-xl bg-primary-50 border border-primary-100 flex items-center justify-center mb-5">
             <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
             </svg>
@@ -305,8 +329,8 @@
           </p>
         </div>
 
-        <div class="group">
-          <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-4">
+        <div>
+          <div class="w-11 h-11 rounded-xl bg-primary-50 border border-primary-100 flex items-center justify-center mb-5">
             <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
             </svg>
@@ -317,8 +341,8 @@
           </p>
         </div>
 
-        <div class="group">
-          <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-4">
+        <div>
+          <div class="w-11 h-11 rounded-xl bg-primary-50 border border-primary-100 flex items-center justify-center mb-5">
             <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
             </svg>
@@ -329,8 +353,8 @@
           </p>
         </div>
 
-        <div class="group">
-          <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center mb-4">
+        <div>
+          <div class="w-11 h-11 rounded-xl bg-primary-50 border border-primary-100 flex items-center justify-center mb-5">
             <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
@@ -344,102 +368,100 @@
     </div>
   </section>
 
-  <!-- Publications -->
-  <section id="publications" class="py-24 md:py-32 bg-slate-50">
+  <!-- ==================== PUBLICATIONS ==================== -->
+  <section id="publications" class="py-28 md:py-36 bg-slate-50 tech-grid">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <p class="section-label">Research</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-4">
+      <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-4">Research</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-5">
         Selected Publications
       </h2>
-      <p class="text-slate-500 mb-14">
+      <p class="text-slate-500 mb-16 text-[15px]">
         Author of 20+ peer-reviewed papers. 
-        <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener" class="text-primary-600 hover:underline underline-offset-2">View full list on Google Scholar →</a>
+        <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener" class="text-primary-600 hover:underline underline-offset-2 font-medium">View full list on Google Scholar →</a>
       </p>
 
-      <div class="space-y-8">
-        <div class="border-l-2 border-primary-200 pl-6">
+      <div class="space-y-10">
+        <div class="border-l-[3px] border-primary-300 pl-6 py-1">
           <p class="text-slate-900 font-medium leading-snug">Processing–Structure–Performance Relationships in Stretch Blow Molded PET Bottles: Optical Quantification of Deformation and Stress-Crack Resistance</p>
-          <p class="text-sm text-slate-500 mt-2">Prasath, R.G.R., Zagarola, S., Danyluk, S. · <em>Polymer Engineering and Science</em>, 2026</p>
+          <p class="text-sm text-slate-500 mt-2.5">Prasath, R.G.R., Zagarola, S., Danyluk, S. · <em>Polymer Engineering and Science</em>, 2026</p>
         </div>
-        <div class="border-l-2 border-primary-200 pl-6">
+        <div class="border-l-[3px] border-primary-300 pl-6 py-1">
           <p class="text-slate-900 font-medium leading-snug">Visualization of Delamination in Encapsulated Flexible Electronics Fabricated Using Slot Die Coating</p>
-          <p class="text-sm text-slate-500 mt-2">Jeong, T-J., Prasath, R.G.R., Sitaraman, S.K., Harris, T.A.L. · <em>Journal of Electronic Materials</em>, 2020</p>
+          <p class="text-sm text-slate-500 mt-2.5">Jeong, T-J., Prasath, R.G.R., Sitaraman, S.K., Harris, T.A.L. · <em>Journal of Electronic Materials</em>, 2020</p>
         </div>
-        <div class="border-l-2 border-primary-200 pl-6">
+        <div class="border-l-[3px] border-primary-300 pl-6 py-1">
           <p class="text-slate-900 font-medium leading-snug">Non-contact Stress Measurement in PET Preforms</p>
-          <p class="text-sm text-slate-500 mt-2">Prasath, R.G.R., Danyluk, S., Zagarola, S. · <em>Polymer-Plastics Technology and Materials</em>, 2019</p>
+          <p class="text-sm text-slate-500 mt-2.5">Prasath, R.G.R., Danyluk, S., Zagarola, S. · <em>Polymer-Plastics Technology and Materials</em>, 2019</p>
         </div>
-        <div class="border-l-2 border-primary-200 pl-6">
+        <div class="border-l-[3px] border-primary-300 pl-6 py-1">
           <p class="text-slate-900 font-medium leading-snug">Stress Monitoring of PET Beverage Bottles by Digital Photoelasticity</p>
-          <p class="text-sm text-slate-500 mt-2">Prasath, R.G.R., Newton, T., Danyluk, S. · <em>Manufacturing Letters</em>, 2018</p>
+          <p class="text-sm text-slate-500 mt-2.5">Prasath, R.G.R., Newton, T., Danyluk, S. · <em>Manufacturing Letters</em>, 2018</p>
         </div>
-        <div class="border-l-2 border-primary-200 pl-6">
+        <div class="border-l-[3px] border-primary-300 pl-6 py-1">
           <p class="text-slate-900 font-medium leading-snug">Crystallographic Orientation Identification in Multicrystalline Silicon Wafers using NIR Transmission Intensity</p>
-          <p class="text-sm text-slate-500 mt-2">Skenes, K., Kumar, A., Prasath, R.G.R., Danyluk, S. · <em>Journal of Electronic Materials</em>, 2018</p>
+          <p class="text-sm text-slate-500 mt-2.5">Skenes, K., Kumar, A., Prasath, R.G.R., Danyluk, S. · <em>Journal of Electronic Materials</em>, 2018</p>
         </div>
-        <div class="border-l-2 border-primary-200 pl-6">
+        <div class="border-l-[3px] border-primary-300 pl-6 py-1">
           <p class="text-slate-900 font-medium leading-snug">Comparison of Phase Shifting Techniques for Measuring In-Plane Residual Stress in Thin, Flat Silicon Wafers</p>
-          <p class="text-sm text-slate-500 mt-2">Prasath, R.G.R., Skenes, K., Danyluk, S. · <em>Journal of Electronic Materials</em>, 2013</p>
+          <p class="text-sm text-slate-500 mt-2.5">Prasath, R.G.R., Skenes, K., Danyluk, S. · <em>Journal of Electronic Materials</em>, 2013</p>
         </div>
-        <div class="border-l-2 border-primary-200 pl-6">
+        <div class="border-l-[3px] border-primary-300 pl-6 py-1">
           <p class="text-slate-900 font-medium leading-snug">Sensitivity of Isoclinic Data Using Various Phase Shifting Techniques in Digital Photoelasticity</p>
-          <p class="text-sm text-slate-500 mt-2">Ramji, M., Prasath, R.G.R. · <em>Optics and Lasers in Engineering</em>, 2011</p>
+          <p class="text-sm text-slate-500 mt-2.5">Ramji, M., Prasath, R.G.R. · <em>Optics and Lasers in Engineering</em>, 2011</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Education & Leadership -->
-  <section class="py-24 md:py-32">
+  <!-- ==================== EDUCATION & LEADERSHIP ==================== -->
+  <section class="py-28 md:py-36 bg-white">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-16">
-        <!-- Education -->
+      <div class="grid md:grid-cols-2 gap-20">
         <div>
-          <p class="section-label">Background</p>
-          <h2 class="text-2xl font-bold text-slate-900 tracking-tight mb-8">Education & Certifications</h2>
-          <div class="space-y-6">
+          <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-4">Background</p>
+          <h2 class="text-2xl font-bold text-slate-900 tracking-tight mb-10">Education & Certifications</h2>
+          <div class="space-y-8">
             <div>
-              <p class="font-medium text-slate-900">B.E., Mechanical Engineering</p>
-              <p class="text-sm text-slate-500 mt-1">Manonmaniam Sundaranar University, 2000</p>
+              <p class="font-semibold text-slate-900">B.E., Mechanical Engineering</p>
+              <p class="text-sm text-slate-500 mt-1.5">Manonmaniam Sundaranar University, 2000</p>
             </div>
             <div>
-              <p class="font-medium text-slate-900">Certified Peer Reviewer</p>
-              <p class="text-sm text-slate-500 mt-1">Elsevier Reviewer Academy, Certificate of Excellence, 2024</p>
+              <p class="font-semibold text-slate-900">Certified Peer Reviewer</p>
+              <p class="text-sm text-slate-500 mt-1.5">Elsevier Reviewer Academy, Certificate of Excellence, 2024</p>
             </div>
             <div>
-              <p class="font-medium text-slate-900">Peer Review Excellence Certification</p>
-              <p class="text-sm text-slate-500 mt-1">Institute of Physics (IOP), 2024</p>
+              <p class="font-semibold text-slate-900">Peer Review Excellence Certification</p>
+              <p class="text-sm text-slate-500 mt-1.5">Institute of Physics (IOP), 2024</p>
             </div>
             <div>
-              <p class="font-medium text-slate-900">Programming for Everybody (Python)</p>
-              <p class="text-sm text-slate-500 mt-1">University of Michigan, 2022</p>
+              <p class="font-semibold text-slate-900">Programming for Everybody (Python)</p>
+              <p class="text-sm text-slate-500 mt-1.5">University of Michigan, 2022</p>
             </div>
           </div>
         </div>
 
-        <!-- Leadership -->
         <div>
-          <p class="section-label">Community</p>
-          <h2 class="text-2xl font-bold text-slate-900 tracking-tight mb-8">Leadership & Service</h2>
-          <ul class="space-y-4 text-slate-600 text-[15px] leading-relaxed">
+          <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-4">Community</p>
+          <h2 class="text-2xl font-bold text-slate-900 tracking-tight mb-10">Leadership & Service</h2>
+          <ul class="space-y-5 text-slate-600 text-[15px] leading-relaxed">
             <li class="flex gap-3">
-              <span class="text-primary-400 mt-1 flex-shrink-0">•</span>
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
               <span>Founder, Digital Image Correlation LinkedIn group (490+ members, since 2011)</span>
             </li>
             <li class="flex gap-3">
-              <span class="text-primary-400 mt-1 flex-shrink-0">•</span>
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
               <span>Founder, Non-Contact Stress Measurement in PET Preforms LinkedIn group</span>
             </li>
             <li class="flex gap-3">
-              <span class="text-primary-400 mt-1 flex-shrink-0">•</span>
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
               <span>Mentored Master’s and PhD students in experimental design and research methodology</span>
             </li>
             <li class="flex gap-3">
-              <span class="text-primary-400 mt-1 flex-shrink-0">•</span>
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
               <span>Peer Reviewer for Elsevier and Wiley journals in optics, polymers, and AI</span>
             </li>
             <li class="flex gap-3">
-              <span class="text-primary-400 mt-1 flex-shrink-0">•</span>
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
               <span>Member, Society for Experimental Mechanics (SEM)</span>
             </li>
           </ul>
@@ -448,29 +470,38 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-24 md:py-32 bg-slate-900 text-slate-300">
-    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-      <p class="text-xs font-semibold tracking-widest uppercase text-primary-400 mb-4">Contact</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="relative py-28 md:py-36 text-slate-300 overflow-hidden">
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80" 
+        alt=""
+        class="w-full h-full object-cover opacity-40"
+      />
+      <div class="absolute inset-0 bg-slate-900/93"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 text-center">
+      <p class="section-label text-primary-400 text-xs font-semibold uppercase mb-5">Contact</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-7">
         Get in Touch
       </h2>
-      <p class="text-slate-400 mb-12 max-w-lg mx-auto leading-relaxed">
+      <p class="text-slate-400 mb-14 max-w-lg mx-auto leading-relaxed text-[16px]">
         Open to research collaborations, consulting opportunities, and industry partnerships in optical metrology, polymer packaging, and AI-driven materials analytics.
       </p>
       
       <a href="mailto:raja.guruprasath@gmail.com" 
-         class="inline-flex items-center px-8 py-3.5 bg-primary-600 text-white text-sm font-medium rounded-full hover:bg-primary-500 transition shadow-lg shadow-primary-900/30">
+         class="inline-flex items-center px-9 py-4 bg-primary-500 text-white text-sm font-semibold rounded-full hover:bg-primary-400 transition shadow-xl shadow-primary-500/20">
         raja.guruprasath@gmail.com
       </a>
 
-      <div class="flex flex-wrap justify-center gap-8 mt-14 text-sm">
+      <div class="flex flex-wrap justify-center gap-10 mt-16 text-sm">
         <a href="https://www.linkedin.com/in/rajaguruprasath-raveendran-228135a/" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">Google Scholar</a>
         <a href="https://orcid.org/0000-0003-4251-0511" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">ORCID</a>
       </div>
 
-      <div class="mt-20 pt-10 border-t border-slate-800 text-sm text-slate-500">
+      <div class="mt-24 pt-10 border-t border-slate-700/60 text-sm text-slate-500">
         <p>© 2026 Rajaguruprasath Raveendran (R. G. R. Prasath)</p>
         <p class="mt-3 text-slate-600">U.S. Work Authorization: Eligible for Cap-Exempt H-1B transfer (previously sponsored by Georgia Institute of Technology)</p>
       </div>
