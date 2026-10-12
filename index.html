@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajaguruprasath Raveendran | Research Engineer</title>
+  <meta name="description" content="Research Engineer specializing in Optical Metrology, Experimental Mechanics, Materials Characterization, Polymer Packaging & AI-Driven Analytics." />
+  <meta name="author" content="Rajaguruprasath Raveendran (R. G. R. Prasath)" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .section-padding { @apply py-16 md:py-24; }
+    .container-narrow { @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="container-narrow">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="font-semibold text-primary-700 text-lg tracking-tight">
+          R. G. R. Prasath
+        </a>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#about" class="text-slate-600 hover:text-primary-600 transition">About</a>
+          <a href="#experience" class="text-slate-600 hover:text-primary-600 transition">Experience</a>
+          <a href="#skills" class="text-slate-600 hover:text-primary-600 transition">Skills</a>
+          <a href="#publications" class="text-slate-600 hover:text-primary-600 transition">Publications</a>
+          <a href="#contact" class="text-slate-600 hover:text-primary-600 transition">Contact</a>
+        </div>
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-3 space-y-2 text-sm font-medium">
+        <a href="#about" class="block py-2 text-slate-600">About</a>
+        <a href="#experience" class="block py-2 text-slate-600">Experience</a>
+        <a href="#skills" class="block py-2 text-slate-600">Skills</a>
+        <a href="#publications" class="block py-2 text-slate-600">Publications</a>
+        <a href="#contact" class="block py-2 text-slate-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-b from-primary-50 to-slate-50">
+    <div class="container-narrow text-center">
+      <p class="text-primary-600 font-medium text-sm tracking-wide uppercase mb-3">Research Engineer</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 tracking-tight mb-4">
+        Rajaguruprasath Raveendran
+      </h1>
+      <p class="text-xl md:text-2xl text-slate-600 font-medium mb-2">
+        R. G. R. Prasath
+      </p>
+      <p class="text-lg text-slate-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+        Optical Metrology · Experimental Mechanics · Materials Characterization · Polymer Packaging · AI-Driven Analytics
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <a href="mailto:raja.guruprasath@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition shadow-sm">
+          Email Me
+        </a>
+        <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-700 border border-slate-300 rounded-lg font-medium hover:bg-slate-50 transition">
+          Google Scholar
+        </a>
+        <a href="https://orcid.org/0000-0003-4251-0511" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-700 border border-slate-300 rounded-lg font-medium hover:bg-slate-50 transition">
+          ORCID
+        </a>
+        <a href="https://www.linkedin.com/in/rajaguruprasath-raveendran-228135a/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-slate-700 border border-slate-300 rounded-lg font-medium hover:bg-slate-50 transition">
+          LinkedIn
+        </a>
+      </div>
+      <p class="text-sm text-slate-500">
+        +1 404-789-6612 · +91 96326-91801 · raja.guruprasath@gmail.com
+      </p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-slate-900 mb-8">Professional Summary</h2>
+      <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
+        <p>
+          Research Engineer with <strong>18+ years</strong> of academic and industrial experience developing optical metrology, materials-characterization, and AI-driven analytical methods across packaging, semiconductor, photovoltaic, aerospace, and flexible-electronics applications.
+        </p>
+        <p>
+          Deep specialization in experimental, non-destructive optical stress and deformation measurement — <strong>digital photoelasticity</strong>, <strong>digital image correlation (DIC)</strong>, <strong>NIR polariscopy</strong>, and <strong>phase-shifting interferometry</strong> — applied to PET/rPET/PEF packaging, semiconductor-grade silicon wafers, solar cells, carbon-fiber composites, and flexible electronics.
+        </p>
+        <p>
+          Technical-lead track record on industry-sponsored programs with <strong>Coca-Cola, Sidel, ALPLA, Plastic Technologies Inc., Boeing, NextFlex, SunPower</strong>, and the Photovoltaic Manufacturing Consortium. Currently building AI/computer-vision frameworks to automate interpretation of optical fringe and deformation data, extending processing-structure-performance models to recycled and bio-based materials.
+        </p>
+        <p>
+          Author of <strong>20+ peer-reviewed publications</strong> and conference papers; certified peer reviewer for Elsevier and IOP journals.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section-padding bg-slate-50">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-slate-900 mb-10">Professional Experience</h2>
+      
+      <div class="space-y-10">
+        <!-- Independent -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-slate-200">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-900">Independent Researcher / Consultant</h3>
+              <p class="text-primary-600 font-medium">India</p>
+            </div>
+            <span class="text-sm font-medium text-slate-500 whitespace-nowrap">2022 – Present</span>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-2 text-slate-600">
+            <li>Developing an AI-assisted analytical framework that extracts morphology-related insights from polariscope-measured birefringence data, targeting non-destructive evaluation of PET/rPET processing, structure, and manufacturing quality.</li>
+            <li>Correlating spatial stretching distribution with residual stress, dimensional stability, and stress-crack resistance in stretch-blow-molded PET containers for industrial clients.</li>
+            <li>Developing non-contact optical methods to map molecular orientation and thermal gradients in translucent polymers, with extension toward PEF and other emerging packaging resins.</li>
+            <li>Providing consulting support in experimental stress analysis, defect detection, and non-contact mechanical integrity evaluation for structural and polymer-based materials.</li>
+          </ul>
+        </div>
+
+        <!-- Polaritek -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-slate-200">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-900">Technical Consultant</h3>
+              <p class="text-primary-600 font-medium">Polaritek Systems Inc., Atlanta, USA</p>
+            </div>
+            <span class="text-sm font-medium text-slate-500 whitespace-nowrap">Jan 2015 – Jan 2020</span>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-2 text-slate-600">
+            <li>Provided technical and product-development expertise for optical stress-measurement and polariscope-based inspection instrumentation, supporting design, calibration, and performance validation of the company’s commercial optical-metrology product line for packaging and materials manufacturers.</li>
+            <li>Contributed to best-practice methodologies for instrument setup and measurement stability used by manufacturing customers.</li>
+          </ul>
+        </div>
+
+        <!-- Georgia Tech -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-slate-200">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-900">Research Engineer I</h3>
+              <p class="text-primary-600 font-medium">Georgia Institute of Technology, Woodruff School of Mechanical Engineering, Atlanta, USA</p>
+            </div>
+            <span class="text-sm font-medium text-slate-500 whitespace-nowrap">May 2012 – Oct 2018</span>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-2 text-slate-600">
+            <li>Served as Technical Lead on multidisciplinary, industry-sponsored programs with Coca-Cola, ALPLA (Austria & Mexico), Sidel (France), Plastic Technologies Inc. (Toledo), Boeing, and NextFlex — developing fully experimental, non-destructive optical systems and data-analysis tools for stress measurement, defect detection, and process-parameter optimization in PET bottle production, aerospace, and flexible-electronics applications.</li>
+            <li>Led non-destructive, wafer-level residual-stress characterization and defect detection of semiconductor-grade silicon wafers using phase-shifting optical interferometry and NIR polariscopy; correlated spatial stress distribution with fracture strength in thin multicrystalline wafers — methods adopted by industry sponsors SunPower and the Photovoltaic Manufacturing Consortium for process improvement.</li>
+            <li>Collaborated across cross-functional research teams under Prof. Steven Danyluk, Prof. Suresh Sitaraman, and Prof. Shreyes Melkote; authored technical procedures and contributed to research proposals.</li>
+          </ul>
+        </div>
+
+        <!-- IIT Hyderabad -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-slate-200">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-900">Senior Research Associate</h3>
+              <p class="text-primary-600 font-medium">Indian Institute of Technology Hyderabad</p>
+            </div>
+            <span class="text-sm font-medium text-slate-500 whitespace-nowrap">2011 – 2012</span>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-2 text-slate-600">
+            <li>Established the Engineering Optics Lab from its early stages and managed the Experimental Stress Analysis Laboratory.</li>
+            <li>Performed experimental mechanics research on CFRP panels using digital image correlation (DIC), including high-temperature DIC for non-destructive deformation and stress characterization.</li>
+          </ul>
+        </div>
+
+        <!-- IIT Madras -->
+        <div class="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-slate-200">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-900">Project Officer</h3>
+              <p class="text-primary-600 font-medium">Indian Institute of Technology Madras</p>
+            </div>
+            <span class="text-sm font-medium text-slate-500 whitespace-nowrap">2004 – 2009</span>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-2 text-slate-600">
+            <li>Led experimental stress analysis and experimental mechanics research on ISRO- and GTRE-sponsored projects, focusing on stress concentration, crack behavior, and interface effects in dissimilar-material systems using advanced optical methods.</li>
+            <li>Developed in-house data-acquisition and analysis software for optical experimental mechanics; contributed to sponsored research projects focused on structural and material reliability.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section-padding bg-white">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-slate-900 mb-10">Core Competencies</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+          <h3 class="font-semibold text-primary-700 mb-3">Optical & Experimental Metrology</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Digital Photoelasticity (Transmission/Reflection), Digital Image Correlation (DIC), NIR Polariscopy, Phase-Shifting Interferometry, Pulse/Transient Thermography, Polarized Light Microscopy, precision optical subsystem alignment & measurement-stability troubleshooting
+          </p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+          <h3 class="font-semibold text-primary-700 mb-3">Materials & Application Domains</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            PET/rPET/PEF packaging & stretch-blow molding, semiconductor-grade silicon wafer stress, photovoltaic materials, carbon-fiber composites, flexible electronics, molecular orientation & crystallinity analysis, stress-crack resistance
+          </p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+          <h3 class="font-semibold text-primary-700 mb-3">Materials Characterization</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            SEM, XRD, DSC/TMA thermal analysis, tensile & fatigue testing, residual-stress and defect analysis, fracture-surface & interface analysis
+          </p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+          <h3 class="font-semibold text-primary-700 mb-3">AI, Data & Software</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Machine-learning / computer-vision models for optical pattern classification, regression modeling for materials data, Python, MATLAB, C++, LabVIEW
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="section-padding bg-slate-50">
+    <div class="container-narrow">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">Selected Publications</h2>
+      <p class="text-slate-600 mb-8">
+        Author of 20+ peer-reviewed journal articles and conference papers. 
+        <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener" class="text-primary-600 hover:underline">Full list on Google Scholar</a>.
+      </p>
+
+      <div class="space-y-5">
+        <div class="bg-white rounded-lg p-5 border border-slate-200">
+          <p class="text-slate-800 font-medium">Processing–Structure–Performance Relationships in Stretch Blow Molded PET Bottles: Optical Quantification of Deformation and Stress-Crack Resistance</p>
+          <p class="text-sm text-slate-500 mt-1">Prasath, R.G.R., Zagarola, S., Danyluk, S. · <em>Polymer Engineering and Science</em>, 66(10), 2026.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-slate-200">
+          <p class="text-slate-800 font-medium">Visualization of Delamination in Encapsulated Flexible Electronics Fabricated Using Slot Die Coating</p>
+          <p class="text-sm text-slate-500 mt-1">Jeong, T-J., Prasath, R.G.R., Sitaraman, S.K., Harris, T.A.L. · <em>Journal of Electronic Materials</em> 49(5), 3332-3339, 2020.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-slate-200">
+          <p class="text-slate-800 font-medium">Non-contact Stress Measurement in PET Preforms</p>
+          <p class="text-sm text-slate-500 mt-1">Prasath, R.G.R., Danyluk, S., Zagarola, S. · <em>Polymer-Plastics Technology and Materials</em>, 58(16), 1802-1809, 2019.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-slate-200">
+          <p class="text-slate-800 font-medium">Stress Monitoring of PET Beverage Bottles by Digital Photoelasticity</p>
+          <p class="text-sm text-slate-500 mt-1">Prasath, R.G.R., Newton, T., Danyluk, S. · <em>Manufacturing Letters</em> 15, 9-13, 2018.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-slate-200">
+          <p class="text-slate-800 font-medium">Crystallographic Orientation Identification in Multicrystalline Silicon Wafers using NIR Transmission Intensity</p>
+          <p class="text-sm text-slate-500 mt-1">Skenes, K., Kumar, A., Prasath, R.G.R., Danyluk, S. · <em>Journal of Electronic Materials</em> 47(2), 1030-1037, 2018.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-slate-200">
+          <p class="text-slate-800 font-medium">Comparison of Phase Shifting Techniques for Measuring In-Plane Residual Stress in Thin, Flat Silicon Wafers</p>
+          <p class="text-sm text-slate-500 mt-1">Prasath, R.G.R., Skenes, K., Danyluk, S. · <em>Journal of Electronic Materials</em> 42(8), 2478-2485, 2013.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-slate-200">
+          <p class="text-slate-800 font-medium">Sensitivity of Isoclinic Data Using Various Phase Shifting Techniques in Digital Photoelasticity Towards Generalized Error Sources</p>
+          <p class="text-sm text-slate-500 mt-1">Ramji, M., Prasath, R.G.R. · <em>Optics and Lasers in Engineering</em> 49(9-10), 1153-1167, 2011.</p>
+        </div>
+      </div>
+
+      <p class="mt-8 text-sm text-slate-500">
+        Additional selected works appear in <em>Experimental Mechanics</em>, <em>Journal of Strain Analysis for Engineering Design</em>, <em>Procedia Manufacturing</em>, EUPVSEC, IEEE PVSC, and SEM conference proceedings.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education & Leadership -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Education -->
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">Education & Certifications</h2>
+          <ul class="space-y-4 text-slate-600">
+            <li>
+              <span class="font-medium text-slate-800">B.E., Mechanical Engineering</span><br>
+              Manonmaniam Sundaranar University, 2000
+            </li>
+            <li>
+              <span class="font-medium text-slate-800">Certified Peer Reviewer</span><br>
+              Reviewer Academy (Elsevier), Certificate of Excellence, 2024
+            </li>
+            <li>
+              <span class="font-medium text-slate-800">Peer Review Excellence Training and Certification</span><br>
+              Institute of Physics (IOP), 2024
+            </li>
+            <li>
+              <span class="font-medium text-slate-800">Programming for Everybody (Getting Started with Python)</span><br>
+              University of Michigan, 2022
+            </li>
+          </ul>
+        </div>
+
+        <!-- Leadership -->
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-6">Leadership & Service</h2>
+          <ul class="space-y-3 text-slate-600 text-sm">
+            <li>Founder, Digital Image Correlation LinkedIn group (490+ members, 2011–Present)</li>
+            <li>Founder, Non-Contact Stress Measurement in PET Preforms and Bottle Bases LinkedIn group (50+ members)</li>
+            <li>Mentored multiple Master’s and PhD students in experimental design, data analysis, and research methodology</li>
+            <li>Peer Reviewer: <em>Journal of Applied Polymer Science</em> (Wiley); <em>Optics and Lasers in Engineering</em>, <em>Optics & Laser Technology</em>, <em>Engineering Science and Technology</em>, and <em>Engineering Applications of Artificial Intelligence</em> (Elsevier)</li>
+            <li>Member, Society for Experimental Mechanics (SEM), 2013–2014</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <section id="contact" class="section-padding bg-slate-900 text-slate-200">
+    <div class="container-narrow text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Get in Touch</h2>
+      <p class="text-slate-400 mb-8 max-w-xl mx-auto">
+        Open to research collaborations, consulting opportunities, and industry partnerships in optical metrology, polymer packaging, and AI-driven materials analytics.
+      </p>
+      
+      <div class="flex flex-wrap justify-center gap-4 mb-10">
+        <a href="mailto:raja.guruprasath@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-500 transition">
+          raja.guruprasath@gmail.com
+        </a>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6 text-sm">
+        <a href="https://www.linkedin.com/in/rajaguruprasath-raveendran-228135a/" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">Google Scholar</a>
+        <a href="https://orcid.org/0000-0003-4251-0511" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">ORCID</a>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-700 text-sm text-slate-500">
+        <p>© 2026 Rajaguruprasath Raveendran (R. G. R. Prasath). All rights reserved.</p>
+        <p class="mt-2">U.S. Work Authorization: Eligible for Cap-Exempt H-1B transfer (previously sponsored by Georgia Institute of Technology).</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.add('hidden'));
+    });
+  </script>
+</body>
+</html>
