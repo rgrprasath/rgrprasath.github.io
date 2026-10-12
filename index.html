@@ -103,6 +103,7 @@
         </a>
         <div class="hidden md:flex items-center gap-9 text-[13px] font-medium text-slate-500">
           <a href="#about" class="hover:text-primary-600 transition">About</a>
+          <a href="#highlights" class="hover:text-primary-600 transition">Highlights</a>
           <a href="#experience" class="hover:text-primary-600 transition">Experience</a>
           <a href="#skills" class="hover:text-primary-600 transition">Skills</a>
           <a href="#publications" class="hover:text-primary-600 transition">Publications</a>
@@ -118,6 +119,7 @@
     <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
       <div class="px-6 py-5 space-y-3 text-sm font-medium text-slate-600">
         <a href="#about" class="block py-1">About</a>
+        <a href="#highlights" class="block py-1">Highlights</a>
         <a href="#experience" class="block py-1">Experience</a>
         <a href="#skills" class="block py-1">Skills</a>
         <a href="#publications" class="block py-1">Publications</a>
@@ -191,7 +193,7 @@
           Deep specialization in experimental, non-destructive optical stress and deformation measurement — <span class="text-slate-900 font-semibold">digital photoelasticity</span>, <span class="text-slate-900 font-semibold">digital image correlation (DIC)</span>, <span class="text-slate-900 font-semibold">NIR polariscopy</span>, and <span class="text-slate-900 font-semibold">phase-shifting interferometry</span> — applied to PET/rPET/PEF packaging, semiconductor-grade silicon wafers, solar cells, carbon-fiber composites, and flexible electronics.
         </p>
         <p>
-          Technical-lead track record on industry-sponsored programs with <span class="text-slate-900 font-semibold">Coca-Cola, Sidel, ALPLA, Plastic Technologies Inc., Boeing, NextFlex, SunPower</span>, and the Photovoltaic Manufacturing Consortium. Currently building AI/computer-vision frameworks to automate interpretation of optical fringe and deformation data.
+          Technical-lead track record on industry-sponsored programs with <span class="text-slate-900 font-semibold">Coca-Cola, Sidel, ALPLA, Plastic Technologies Inc., Boeing, NextFlex</span>, and the Photovoltaic Manufacturing Consortium. Currently building AI/computer-vision frameworks to automate interpretation of optical fringe and deformation data.
         </p>
         <p>
           Author of <span class="text-slate-900 font-semibold">20+ peer-reviewed publications</span> and conference papers; certified peer reviewer for Elsevier and IOP journals.
@@ -200,8 +202,145 @@
     </div>
   </section>
 
+  <!-- ==================== RESEARCH HIGHLIGHTS ==================== -->
+  <section id="highlights" class="py-28 md:py-36 bg-slate-50 tech-grid">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-4">Impact</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-6">
+        Research Highlights
+      </h2>
+      <p class="text-slate-500 mb-14 text-[15px] leading-relaxed max-w-2xl">
+        Selected results from industry-sponsored and independent work in optical metrology, polymer process–structure–performance, and AI-driven materials analytics.
+      </p>
+
+      <div class="space-y-10">
+        <!-- AI Platform -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 md:p-8 shadow-sm">
+          <p class="text-xs font-semibold uppercase tracking-wider text-primary-600 mb-3">AI-Driven Morphology Platform</p>
+          <h3 class="text-lg font-semibold text-slate-900 mb-4">Non-Destructive Multi-SCR Prediction from a Single Polarized Image</h3>
+          
+          <figure class="mb-5">
+            <img src="images/pet-fringe-bw.jpg" alt="Polarized-light fringe pattern of PET bottle base used as AI input" class="w-full max-w-md mx-auto rounded-lg border border-slate-100" loading="lazy" />
+            <figcaption class="text-[11px] text-slate-400 mt-1.5 text-center">Example input: polarized fringe pattern of PET bottle base</figcaption>
+          </figure>
+
+          <p class="text-slate-600 text-[15px] leading-relaxed mb-5">
+            Single high-resolution polarized-light image of a PET bottle base → 139 spatial, directional &amp; texture features → multi-output deep regression predicting environmental stress-crack resistance at multiple conditions in ~1 second.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+            <div class="bg-slate-50 rounded-xl py-4 px-3">
+              <p class="text-xl font-bold text-primary-700">0.65–0.85</p>
+              <p class="text-xs text-slate-500 mt-1">R² vs laboratory</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl py-4 px-3">
+              <p class="text-xl font-bold text-primary-700">~70%</p>
+              <p class="text-xs text-slate-500 mt-1">within ±5 min</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl py-4 px-3 col-span-2 sm:col-span-1">
+              <p class="text-xl font-bold text-primary-700">~90%</p>
+              <p class="text-xs text-slate-500 mt-1">within ±10 min</p>
+            </div>
+          </div>
+          <p class="text-sm text-slate-500 mt-5">Currently being extended to rPET and bio-based PEF resins. Deterministic inference designed for industrial auditability.</p>
+        </div>
+
+        <!-- PET Packaging -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 md:p-8 shadow-sm">
+          <p class="text-xs font-semibold uppercase tracking-wider text-primary-600 mb-3">Polymer Mechanics · PET Packaging</p>
+          <h3 class="text-lg font-semibold text-slate-900 mb-4">Non-Contact Residual Stress &amp; Morphology for Process Control</h3>
+          
+          <!-- Image gallery: fringe + stress maps -->
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <figure>
+              <img src="images/pet-fringe-map.jpg" alt="PET bottle-base photoelastic fringe map" class="w-full rounded-lg border border-slate-100 object-cover aspect-square" loading="lazy" />
+              <figcaption class="text-[11px] text-slate-400 mt-1.5 text-center">Fringe map (PET base)</figcaption>
+            </figure>
+            <figure>
+              <img src="images/pet-stress-map.jpg" alt="PET residual stress map" class="w-full rounded-lg border border-slate-100 object-cover aspect-square" loading="lazy" />
+              <figcaption class="text-[11px] text-slate-400 mt-1.5 text-center">Residual stress map</figcaption>
+            </figure>
+            <figure>
+              <img src="images/pet-stress-3d.jpg" alt="3D residual stress distribution on PET base" class="w-full rounded-lg border border-slate-100 object-cover aspect-square" loading="lazy" />
+              <figcaption class="text-[11px] text-slate-400 mt-1.5 text-center">3D stress distribution</figcaption>
+            </figure>
+            <figure>
+              <img src="images/pet-morphology-zones.jpg" alt="Morphology zones on PET bottle base" class="w-full rounded-lg border border-slate-100 object-cover aspect-square" loading="lazy" />
+              <figcaption class="text-[11px] text-slate-400 mt-1.5 text-center">Morphology zones</figcaption>
+            </figure>
+          </div>
+
+          <ul class="space-y-3 text-slate-600 text-[15px] leading-relaxed">
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>Automated circular-polariscope systems for PET bottles &amp; preforms with ~10 s measurement cycle.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>Quantified residual stress, molecular orientation and spatial stretching distribution; correlated optical morphology metrics with environmental stress-crack resistance (SCR).</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>Three deformation regimes mapped in stretch-blow-molded bases; pre-blow pressure (0.5–0.9 MPa) identified as the dominant morphology driver.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>Lab prototypes transferred to commercial instruments used by packaging manufacturers.</span>
+            </li>
+          </ul>
+          <p class="text-sm text-slate-500 mt-5 font-medium">Sponsors: Coca-Cola · ALPLA · Sidel · Plastic Technologies Inc.</p>
+        </div>
+
+        <!-- Silicon / PV -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 md:p-8 shadow-sm">
+          <p class="text-xs font-semibold uppercase tracking-wider text-primary-600 mb-3">Semiconductor &amp; Photovoltaic Metrology</p>
+          <h3 class="text-lg font-semibold text-slate-900 mb-4">Full-Field Residual Stress Mapping on Silicon Wafers</h3>
+          
+          <figure class="mb-6">
+            <img src="images/si-wafer-stress.jpg" alt="Residual stress map on polycrystalline silicon wafer" class="w-full rounded-lg border border-slate-100" loading="lazy" />
+            <figcaption class="text-[11px] text-slate-400 mt-1.5 text-center">Polycrystalline silicon wafer — residual stress (NIR polariscopy)</figcaption>
+          </figure>
+
+          <ul class="space-y-3 text-slate-600 text-[15px] leading-relaxed">
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>NIR polariscopy and phase-shifting interferometry for residual stress on thin multicrystalline and monocrystalline wafers.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>Spatial stress distribution correlated with fracture strength; methods adopted by the Photovoltaic Manufacturing Consortium for process improvement.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>Process-influence studies on growth rate, diamond-wire vs slurry sawing, and etching; crystallographic orientation from NIR transmission intensity.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Flexible electronics & composites -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 md:p-8 shadow-sm">
+          <p class="text-xs font-semibold uppercase tracking-wider text-primary-600 mb-3">Flexible Electronics &amp; Composites</p>
+          <h3 class="text-lg font-semibold text-slate-900 mb-4">Delamination, Residual Stress &amp; High-Temperature DIC</h3>
+          <ul class="space-y-3 text-slate-600 text-[15px] leading-relaxed">
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>Visualization of delamination in encapsulated flexible electronics (slot-die coating); process-induced residual stresses in PET and Kapton substrates (<em>Journal of Electronic Materials</em>, 2020).</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>Full-field DIC characterization of CFRP panels including high-temperature testing; sensitivity analysis for reliable strain measurement.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
+              <span>Pulse/transient thermography for subsurface defect detection (Boeing-sponsored studies).</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== EXPERIENCE ==================== -->
-  <section id="experience" class="py-28 md:py-36 bg-slate-50 tech-grid">
+  <section id="experience" class="py-28 md:py-36 bg-white">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
       <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-4">Career</p>
       <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-16">
@@ -275,7 +414,7 @@
             </li>
             <li class="flex gap-3.5">
               <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
-              <span>Led wafer-level residual-stress characterization of semiconductor-grade silicon using phase-shifting interferometry and NIR polariscopy; methods adopted by SunPower and the Photovoltaic Manufacturing Consortium.</span>
+              <span>Led wafer-level residual-stress characterization of semiconductor-grade silicon using phase-shifting interferometry and NIR polariscopy; methods adopted by the Photovoltaic Manufacturing Consortium.</span>
             </li>
             <li class="flex gap-3.5">
               <span class="text-primary-400 mt-2 flex-shrink-0 text-lg leading-none">▸</span>
