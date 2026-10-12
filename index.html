@@ -57,6 +57,28 @@
         linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
       background-size: 44px 44px;
     }
+    /* Soft interference / light-ray pattern for hero */
+    .hero-optical {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(14, 165, 233, 0.12), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(56, 189, 248, 0.08), transparent),
+        radial-gradient(ellipse 50% 30% at 20% 80%, rgba(14, 165, 233, 0.06), transparent),
+        repeating-linear-gradient(
+          105deg,
+          transparent,
+          transparent 40px,
+          rgba(14, 165, 233, 0.03) 40px,
+          rgba(14, 165, 233, 0.03) 41px
+        ),
+        repeating-linear-gradient(
+          -15deg,
+          transparent,
+          transparent 60px,
+          rgba(56, 189, 248, 0.025) 60px,
+          rgba(56, 189, 248, 0.025) 61px
+        );
+    }
   </style>
 </head>
 <body class="bg-white text-slate-700 antialiased">
@@ -93,60 +115,45 @@
     </div>
   </nav>
 
-  <!-- ==================== HERO with Technical Background ==================== -->
-  <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-    <!-- Technical / scientific background image -->
-    <div class="absolute inset-0">
-      <img 
-        src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80" 
-        alt="Abstract scientific optical background"
-        class="w-full h-full object-cover"
-      />
-      <!-- Dark overlay for text readability -->
-      <div class="absolute inset-0 bg-gradient-to-b from-slate-900/88 via-slate-900/82 to-slate-900/90"></div>
-      <!-- Subtle accent glow -->
-      <div class="absolute inset-0 bg-gradient-to-tr from-primary-900/25 via-transparent to-cyan-900/15"></div>
-    </div>
-
+  <!-- ==================== HERO – Light optical background ==================== -->
+  <section id="home" class="relative min-h-[88vh] flex items-center justify-center overflow-hidden hero-optical">
     <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center py-28 md:py-36">
-      <p class="section-label text-primary-300 text-xs font-semibold uppercase mb-5">
+      <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-5">
         Research &amp; Development Engineer
       </p>
       
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-[1.15] mb-4">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.15] mb-4">
         Rajaguruprasath<br class="sm:hidden"> Raveendran
       </h1>
       
-      <p class="text-lg md:text-xl text-slate-300 font-medium mb-7 tracking-wide">
+      <p class="text-lg md:text-xl text-slate-500 font-medium mb-8 tracking-wide">
         R. G. R. Prasath
       </p>
       
-      <!-- Core focus areas -->
-      <p class="text-base md:text-[17px] text-white font-medium max-w-3xl mx-auto mb-5 leading-relaxed">
+      <!-- Full expertise line – clearly readable -->
+      <p class="text-[15px] md:text-base text-slate-700 font-medium max-w-3xl mx-auto mb-3 leading-relaxed">
         Optical Metrology &amp; Residual Stress &nbsp;·&nbsp; Experimental Mechanics
       </p>
-      
-      <!-- Domains & techniques -->
-      <p class="text-[14px] md:text-[15px] text-slate-300/90 max-w-3xl mx-auto mb-12 leading-relaxed tracking-wide">
+      <p class="text-[13px] md:text-[14px] text-slate-500 max-w-3xl mx-auto mb-12 leading-relaxed tracking-wide">
         PET &nbsp;•&nbsp; Silicon Wafers &nbsp;•&nbsp; Glass &nbsp;•&nbsp; Polymers &nbsp;•&nbsp; Composites &nbsp;•&nbsp; Flexible Electronics<br class="hidden sm:block">
         AI / Computer Vision &nbsp;•&nbsp; Defect Detection &nbsp;•&nbsp; Analysis &nbsp;•&nbsp; Thermography
       </p>
       
-      <div class="flex flex-wrap justify-center gap-3.5 mb-14">
+      <div class="flex flex-wrap justify-center gap-3.5 mb-12">
         <a href="mailto:raja.guruprasath@gmail.com" 
-           class="inline-flex items-center px-7 py-3.5 bg-primary-500 text-white text-sm font-semibold rounded-full hover:bg-primary-400 transition shadow-lg shadow-primary-500/25">
+           class="inline-flex items-center px-7 py-3.5 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-md shadow-primary-200">
           Email Me
         </a>
         <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener"
-           class="inline-flex items-center px-7 py-3.5 bg-white/10 text-white text-sm font-medium rounded-full border border-white/25 hover:bg-white/20 transition backdrop-blur-sm">
+           class="inline-flex items-center px-7 py-3.5 bg-white text-slate-700 text-sm font-medium rounded-full border border-slate-200 hover:border-primary-300 hover:text-primary-700 transition shadow-sm">
           Google Scholar
         </a>
         <a href="https://orcid.org/0000-0003-4251-0511" target="_blank" rel="noopener"
-           class="inline-flex items-center px-7 py-3.5 bg-white/10 text-white text-sm font-medium rounded-full border border-white/25 hover:bg-white/20 transition backdrop-blur-sm">
+           class="inline-flex items-center px-7 py-3.5 bg-white text-slate-700 text-sm font-medium rounded-full border border-slate-200 hover:border-primary-300 hover:text-primary-700 transition shadow-sm">
           ORCID
         </a>
         <a href="https://www.linkedin.com/in/rajaguruprasath-raveendran-228135a/" target="_blank" rel="noopener"
-           class="inline-flex items-center px-7 py-3.5 bg-white/10 text-white text-sm font-medium rounded-full border border-white/25 hover:bg-white/20 transition backdrop-blur-sm">
+           class="inline-flex items-center px-7 py-3.5 bg-white text-slate-700 text-sm font-medium rounded-full border border-slate-200 hover:border-primary-300 hover:text-primary-700 transition shadow-sm">
           LinkedIn
         </a>
       </div>
@@ -155,9 +162,6 @@
         +1 404-789-6612 &nbsp;·&nbsp; +91 96326-91801 &nbsp;·&nbsp; raja.guruprasath@gmail.com
       </p>
     </div>
-
-    <!-- Soft fade into white content -->
-    <div class="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-white to-transparent"></div>
   </section>
 
   <!-- ==================== ABOUT ==================== -->
@@ -464,52 +468,65 @@
             </li>
             <li class="flex gap-3">
               <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
-              <span>Peer Reviewer for Elsevier and Wiley journals in optics, polymers, and AI</span>
-            </li>
-            <li class="flex gap-3">
-              <span class="text-primary-400 mt-1 flex-shrink-0">▸</span>
               <span>Member, Society for Experimental Mechanics (SEM)</span>
             </li>
           </ul>
+
+          <div class="mt-10 pt-8 border-t border-slate-100">
+            <p class="font-semibold text-slate-900 mb-4">Peer Reviewer</p>
+            <ul class="space-y-2.5 text-slate-600 text-[14px] leading-relaxed">
+              <li class="flex gap-2.5">
+                <span class="text-primary-400 flex-shrink-0">•</span>
+                <span><em>Journal of Applied Polymer Science</em> (Wiley)</span>
+              </li>
+              <li class="flex gap-2.5">
+                <span class="text-primary-400 flex-shrink-0">•</span>
+                <span><em>Optics and Lasers in Engineering</em> (Elsevier)</span>
+              </li>
+              <li class="flex gap-2.5">
+                <span class="text-primary-400 flex-shrink-0">•</span>
+                <span><em>Optics &amp; Laser Technology</em> (Elsevier)</span>
+              </li>
+              <li class="flex gap-2.5">
+                <span class="text-primary-400 flex-shrink-0">•</span>
+                <span><em>Engineering Science and Technology</em> (Elsevier)</span>
+              </li>
+              <li class="flex gap-2.5">
+                <span class="text-primary-400 flex-shrink-0">•</span>
+                <span><em>Engineering Applications of Artificial Intelligence</em> (Elsevier)</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==================== CONTACT ==================== -->
-  <section id="contact" class="relative py-28 md:py-36 text-slate-300 overflow-hidden">
-    <div class="absolute inset-0">
-      <img 
-        src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80" 
-        alt=""
-        class="w-full h-full object-cover opacity-40"
-      />
-      <div class="absolute inset-0 bg-slate-900/93"></div>
-    </div>
-
-    <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 text-center">
-      <p class="section-label text-primary-400 text-xs font-semibold uppercase mb-5">Contact</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-7">
+  <section id="contact" class="py-28 md:py-36 bg-slate-50 tech-grid">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+      <p class="section-label text-primary-600 text-xs font-semibold uppercase mb-5">Contact</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-7">
         Get in Touch
       </h2>
-      <p class="text-slate-400 mb-14 max-w-lg mx-auto leading-relaxed text-[16px]">
+      <p class="text-slate-500 mb-12 max-w-lg mx-auto leading-relaxed text-[16px]">
         Open to research collaborations, consulting opportunities, and industry partnerships in optical metrology, polymer packaging, and AI-driven materials analytics.
       </p>
       
       <a href="mailto:raja.guruprasath@gmail.com" 
-         class="inline-flex items-center px-9 py-4 bg-primary-500 text-white text-sm font-semibold rounded-full hover:bg-primary-400 transition shadow-xl shadow-primary-500/20">
+         class="inline-flex items-center px-9 py-4 bg-primary-600 text-white text-sm font-semibold rounded-full hover:bg-primary-700 transition shadow-md shadow-primary-200">
         raja.guruprasath@gmail.com
       </a>
 
-      <div class="flex flex-wrap justify-center gap-10 mt-16 text-sm">
-        <a href="https://www.linkedin.com/in/rajaguruprasath-raveendran-228135a/" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">Google Scholar</a>
-        <a href="https://orcid.org/0000-0003-4251-0511" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition">ORCID</a>
+      <div class="flex flex-wrap justify-center gap-10 mt-14 text-sm">
+        <a href="https://www.linkedin.com/in/rajaguruprasath-raveendran-228135a/" target="_blank" rel="noopener" class="text-slate-500 hover:text-primary-600 transition">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=2udv9CYAAAAJ&hl=en" target="_blank" rel="noopener" class="text-slate-500 hover:text-primary-600 transition">Google Scholar</a>
+        <a href="https://orcid.org/0000-0003-4251-0511" target="_blank" rel="noopener" class="text-slate-500 hover:text-primary-600 transition">ORCID</a>
       </div>
 
-      <div class="mt-24 pt-10 border-t border-slate-700/60 text-sm text-slate-500">
+      <div class="mt-20 pt-10 border-t border-slate-200 text-sm text-slate-400">
         <p>© 2026 Rajaguruprasath Raveendran (R. G. R. Prasath)</p>
-        <p class="mt-3 text-slate-600">U.S. Work Authorization: Eligible for Cap-Exempt H-1B transfer (previously sponsored by Georgia Institute of Technology)</p>
+        <p class="mt-3 text-slate-400">U.S. Work Authorization: Eligible for Cap-Exempt H-1B transfer (previously sponsored by Georgia Institute of Technology)</p>
       </div>
     </div>
   </section>
